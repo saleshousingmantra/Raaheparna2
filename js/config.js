@@ -31,8 +31,8 @@ window.SITE_CONFIG = {
      email is sent to this RM. */
   DEFAULT_DEVELOPER_NAME: "Raahee Corp",
 
-  DEFAULT_MANAGER_NAME: "Nikhil Kamble",
-  DEFAULT_MANAGER_EMAIL: "nikhil.housingmantra@gmail.com"
+  DEFAULT_MANAGER_NAME: "Pranav Dhage",
+  DEFAULT_MANAGER_EMAIL: "pranav.housingmantra@gmail.com"
 
   /* NOTE ON EMAIL ROUTING:
      Every new enquiry row is emailed (by a database trigger and the
