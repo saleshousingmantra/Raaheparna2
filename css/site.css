@@ -128,7 +128,8 @@ em { font-style: normal; }
 .fact--lime { background: var(--lime); color: var(--ink); }
 .fact--forest { background: #1f5f3a; color: #fff; }
 .fact--teal { background: var(--teal); color: #04241e; }
-.fact--white { background: var(--surface); border: 1px solid var(--line); }
+.fact--ink { background: #10261f; color: #fff; }
+.fact--ink .fact__num { color: var(--lime); }
 
 /* ---------- story ---------- */
 .story { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
