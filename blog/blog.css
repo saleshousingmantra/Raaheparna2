@@ -63,7 +63,7 @@ a:hover { color:#9a4d2c; }
 }
 
 /* Neon Jungle premium light theme */
-:root { --teal:#1b1030; --teal-2:#3b2a5c; --teal-3:#f1e6fd; --gold:#F23598; --cream:#f8fdf2; --tint:#eefadf; --ink:#1b1030; --muted:#5d5470; --line:#e0d9ec; }
+:root { --teal:#1b1030; --teal-2:#3b2a5c; --teal-3:#f1e6fd; --gold:#12A58F; --cream:#f8fdf2; --tint:#eefadf; --ink:#1b1030; --muted:#5d5470; --line:#e0d9ec; }
 h1, h2 { font-weight:300; }
 a { color:var(--gold); }
 a:hover { color:#1b1030; }
@@ -92,14 +92,14 @@ a:hover { color:#1b1030; }
 @media (max-width:900px) { .main-nav { background:var(--cream); border-top:1px solid var(--line); box-shadow:0 14px 30px rgba(27,16,48,.1); } }
 
 /* Neon Jungle accents */
-:root { --lime:#89F336; --green:#38A711; --magenta:#F23598; --violet:#A835F2; --magenta-d:#BE1F78; --violet-d:#8A22D0; }
+:root { --lime:#89F336; --green:#38A711; --tealgreen:#12A58F; --violet:#A835F2; --tealgreen-d:#0B7A6B; --violet-d:#8A22D0; }
 a { color:var(--violet-d); }
-a:hover { color:var(--magenta-d); }
+a:hover { color:var(--tealgreen-d); }
 .main-nav a:hover, .main-nav a[aria-current="page"] { color:var(--violet-d); }
 .main-nav .btn, .cta a.btn { background:var(--violet); color:#fff; }
-.main-nav .btn:hover, .cta a.btn:hover { background:var(--magenta); color:#fff; }
+.main-nav .btn:hover, .cta a.btn:hover { background:var(--tealgreen); color:#fff; }
 .post figure img { box-shadow:12px 12px 0 var(--lime); }
 .cta { box-shadow:10px 10px 0 var(--lime); }
-.related li a:hover { border-color:var(--magenta); color:var(--violet-d); }
-.card .more { color:var(--magenta-d); }
+.related li a:hover { border-color:var(--tealgreen); color:var(--violet-d); }
+.card .more { color:var(--tealgreen-d); }
 .foot-nav a:hover { color:var(--violet-d); }

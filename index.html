@@ -771,7 +771,7 @@
       --cream: #f8fdf2; --tint: #eefadf;
       --ink: #1b1030; --muted: #5d5470; --line: #e0d9ec;
       --teal: #1b1030; --teal-2: #3b2a5c; --teal-3: #f1e6fd;
-      --gold: #F23598; --bronze: #F23598;
+      --gold: #12A58F; --bronze: #12A58F;
       --paper: #ffffff; --brass-tint: #f4e9fe; --brass-line: #89F336;
     }
     body { background: var(--cream); color: var(--ink); font-weight: 400; }
@@ -930,41 +930,41 @@
     .tick li { padding-left: 2em; }
     @media (prefers-reduced-motion: reduce) { .hero-bg img, .frame.reveal img { animation: none; transform: none; } }
 
-    /* ---- Neon Jungle palette: #89F336 lime, #38A711 green, #F23598 magenta, #A835F2 violet ---- */
-    :root { --lime: #89F336; --green: #38A711; --magenta: #F23598; --violet: #A835F2; --magenta-d: #BE1F78; --violet-d: #8A22D0; }
+    /* ---- Neon Jungle palette: #89F336 lime, #38A711 green, #12A58F magenta, #A835F2 violet ---- */
+    :root { --lime: #89F336; --green: #38A711; --tealgreen: #12A58F; --violet: #A835F2; --tealgreen-d: #0B7A6B; --violet-d: #8A22D0; }
     ::selection { background: var(--lime); color: #1b1030; }
     a { color: var(--violet-d); }
     em, .hero h1 em { color: var(--violet); }
-    .label, .card .size, .near b, .hc-badge { color: var(--magenta-d); }
-    .label::before { background: var(--magenta); }
-    .hc-badge { border-color: var(--magenta); }
+    .label, .card .size, .near b, .hc-badge { color: var(--tealgreen-d); }
+    .label::before { background: var(--tealgreen); }
+    .hc-badge { border-color: var(--tealgreen); }
     .contact a { color: var(--violet-d); }
     .main-nav a:hover, .foot-nav a:hover { color: var(--violet-d); }
-    .main-nav a:not(.btn)::after { background: var(--magenta); }
+    .main-nav a:not(.btn)::after { background: var(--tealgreen); }
     .btn-gold, .btn-teal { background: var(--violet); border-color: var(--violet); color: #fff; }
-    .btn-gold:hover, .btn-teal:hover { background: var(--magenta); border-color: var(--magenta); color: #fff; }
+    .btn-gold:hover, .btn-teal:hover { background: var(--tealgreen); border-color: var(--tealgreen); color: #fff; }
     .btn-ghost { color: var(--violet-d); border-color: var(--violet); }
     .btn-ghost:hover { background: var(--violet); color: #fff; }
     .main-nav .btn, .hero-card .btn, .cta a.btn { background: var(--violet); border-color: var(--violet); }
-    .progress { height: 3px; background: linear-gradient(90deg, var(--lime), var(--green), var(--magenta), var(--violet)); }
-    .stats { border-top: 4px solid transparent; border-image: linear-gradient(90deg, var(--lime), var(--green), var(--magenta), var(--violet)) 1; }
-    .card::before { height: 3px; background: linear-gradient(90deg, var(--magenta), var(--violet)); }
+    .progress { height: 3px; background: linear-gradient(90deg, var(--lime), var(--green), var(--tealgreen), var(--violet)); }
+    .stats { border-top: 4px solid transparent; border-image: linear-gradient(90deg, var(--lime), var(--green), var(--tealgreen), var(--violet)) 1; }
+    .card::before { height: 3px; background: linear-gradient(90deg, var(--tealgreen), var(--violet)); }
     .price-lock .lk-ic { background: var(--violet); }
-    .price-lock:hover .lk-ic, .price-lock:focus-visible .lk-ic { background: var(--magenta); }
+    .price-lock:hover .lk-ic, .price-lock:focus-visible .lk-ic { background: var(--tealgreen); }
     .pricing td.tot { color: var(--violet-d); }
     .pricing thead th { border-bottom: 2px solid var(--violet); }
-    .tabs button[aria-selected="true"] { border-bottom-color: var(--magenta); }
+    .tabs button[aria-selected="true"] { border-bottom-color: var(--tealgreen); }
     .tick li::before, .amen li::before { background: var(--green); }
     .hc-list li::before { background-color: var(--green); }
-    .faq summary::after { color: var(--magenta); }
+    .faq summary::after { color: var(--tealgreen); }
     .faq details[open] summary { color: var(--violet-d); }
     .frame, .form-wrap { box-shadow: 14px 14px 0 var(--lime); }
     .hero-card { box-shadow: 0 34px 80px rgba(27,16,48,.28), 10px 10px 0 var(--lime); }
-    .hc-head { border-bottom: 3px solid var(--magenta); }
+    .hc-head { border-bottom: 3px solid var(--tealgreen); }
     .float-bar .b { background: var(--green); }
     .float-bar .c { background: var(--violet); color: #fff; }
     .hero h1 .h1-sub { letter-spacing: -.02em; }
-    .dev .nums strong { background: linear-gradient(90deg, var(--magenta), var(--violet)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .dev .nums strong { background: linear-gradient(90deg, var(--tealgreen), var(--violet)); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .grid button:hover::after { border-color: var(--lime); }
 
     /* mobile (re-asserted after this layer) */
