@@ -1,0 +1,13 @@
+{
+  "name": "raheeparna2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raahee Parna by Raahee Corp, Dudulgaon, Moshi, Pune: static landing site and blog",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "npm run build && npx --yes serve dist"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

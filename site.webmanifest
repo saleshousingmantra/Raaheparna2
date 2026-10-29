@@ -1,0 +1,15 @@
+{
+  "name": "Raahee Parna, Dudulgaon, Moshi, Pune",
+  "short_name": "Raahee Parna",
+  "description": "2, 2.5 and 3 BHK flats in Dudulgaon, Moshi, Pune by Raahee Corp.",
+  "lang": "en-IN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
