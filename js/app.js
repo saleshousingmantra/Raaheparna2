@@ -1,7 +1,7 @@
 /* Raahee Parna: page behaviour (menu, motion, lightbox, enquiry popup) */
 document.addEventListener('DOMContentLoaded', function () {
   var cfg = window.SITE_CONFIG || {};
-  var PHONE = '917420880067';
+  var PHONE = '919371064754';
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Fill Project, Developer and Relationship Manager fields from config.js */
