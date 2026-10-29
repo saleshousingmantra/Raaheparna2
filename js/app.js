@@ -16,6 +16,42 @@ document.addEventListener('DOMContentLoaded', function () {
      localStorage and unlocked prices for good, so clear that old key.) */
   try { localStorage.removeItem('raahee_prices_unlocked'); } catch (e) {}
 
+
+  /* Reading progress line */
+  var prog = document.getElementById('progress');
+  if (prog) {
+    var upd = function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? Math.min(100, (window.scrollY / h) * 100) : 0) + '%';
+    };
+    window.addEventListener('scroll', upd, { passive: true });
+    upd();
+  }
+
+  /* Count-up for the key facts band */
+  var statEls = document.querySelectorAll('.stats strong');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (statEls.length && 'IntersectionObserver' in window && !reduceMotion) {
+    var so = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        so.unobserve(en.target);
+        var el = en.target, txt = el.textContent.trim();
+        var m = txt.match(/^([\d.]+)(.*)$/);
+        if (!m) return;
+        var end = parseFloat(m[1]), suffix = m[2], dec = (m[1].split('.')[1] || '').length, t0 = null;
+        function step(ts) {
+          if (t0 === null) t0 = ts;
+          var p = Math.min((ts - t0) / 1400, 1), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = (end * e).toFixed(dec) + suffix;
+          if (p < 1) window.requestAnimationFrame(step); else el.textContent = txt;
+        }
+        window.requestAnimationFrame(step);
+      });
+    }, { threshold: .6 });
+    statEls.forEach(function (el) { so.observe(el); });
+  }
+
   /* Mobile nav */
   var toggle = document.getElementById('navToggle'), nav = document.getElementById('mainNav');
   if (toggle && nav) {

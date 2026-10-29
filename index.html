@@ -891,6 +891,45 @@
     .modal-overlay { background: rgba(22,20,15,.5); }
     .modal { background: var(--paper); border-radius: 2px; }
 
+    /* ---- polish: refined details, motion and rhythm ---- */
+    body { font-size: 1.02rem; line-height: 1.75; }
+    h2 { text-wrap: balance; }
+    .lead { max-width: 38em; }
+    .main-nav a:not(.btn) { position: relative; padding: .4em 0; }
+    .main-nav a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+    .main-nav a:not(.btn):hover::after { transform: scaleX(1); }
+    .site-header.scrolled { box-shadow: 0 8px 30px rgba(22,20,15,.07); }
+    .progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--gold); z-index: 80; pointer-events: none; }
+    .btn-gold::after, .btn-ghost::after { content: "\2192"; display: inline-block; margin-left: .9em; transition: transform .25s; letter-spacing: 0; }
+    .btn-gold:hover::after, .btn-ghost:hover::after { transform: translateX(5px); }
+    .main-nav .btn::after, .hero-card .btn::after, .btn-teal::after, .btn-block::after { content: none; }
+    @keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12); } }
+    .hero-bg img { animation: drift 22s ease-in-out infinite alternate; }
+    .frame img, .grid img { transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+    .frame.reveal img { transform: scale(1.07); }
+    .frame.reveal.in img { transform: scale(1); }
+    .grid button:hover img { transform: scale(1.06); }
+    .grid button::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(255,255,255,0); transition: border-color .3s, inset .3s; pointer-events: none; }
+    .grid button:hover::after { inset: 10px; border-color: rgba(255,255,255,.75); }
+    .grid span { font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; padding: 34px 16px 14px; }
+    .amen ul { list-style: none; padding: 0; margin-top: .4em; }
+    .amen li { position: relative; padding-left: 1.4em; margin-bottom: .35em; }
+    .amen li::before { content: ""; position: absolute; left: 0; top: .78em; width: 9px; height: 1px; background: var(--gold); }
+    .near li { border-bottom-style: solid; }
+    .dev .nums { display: grid; grid-template-columns: repeat(3, max-content); gap: 0; margin-top: 2rem; }
+    .dev .nums > div { padding: 0 1.8rem; border-left: 1px solid var(--line); text-transform: uppercase; letter-spacing: .12em; font-size: .68rem; }
+    .dev .nums > div:first-child { padding-left: 0; border-left: 0; }
+    .dev .nums strong { text-transform: none; letter-spacing: -.01em; margin-bottom: .2em; }
+    .faq summary { font-weight: 400; font-size: 1.08rem; padding: .2em 0; }
+    .faq details { padding: 1.15em 0; }
+    .faq details[open] summary { color: var(--gold); }
+    .site-footer .foot-logo { height: 72px; }
+    .stats strong { font-variant-numeric: tabular-nums; }
+    .hero h1 .h1-sub { letter-spacing: -.02em; }
+    .tick li::before { width: 14px; height: 1px; border-radius: 0; top: .85em; }
+    .tick li { padding-left: 2em; }
+    @media (prefers-reduced-motion: reduce) { .hero-bg img, .frame.reveal img { animation: none; transform: none; } }
+
     /* mobile (re-asserted after this layer) */
     @media (max-width: 900px) {
       .main-nav { background: var(--cream); border-top: 1px solid var(--line); box-shadow: 0 14px 30px rgba(22,20,15,.1); }
@@ -911,11 +950,15 @@
       .form-wrap { box-shadow: none; }
       .amen div { padding: 0; border-top: 1px solid var(--line); }
       .amen h3 { font-size: .74rem; }
+      .dev .nums { grid-template-columns: repeat(3, 1fr); }
+      .dev .nums > div { padding: 0 .7rem; font-size: .56rem; letter-spacing: .08em; }
+      .dev .nums strong { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
 
+  <div class="progress" id="progress" aria-hidden="true"></div>
   <header class="site-header">
     <div class="container header-in">
       <a class="brand" href="#top" aria-label="Raahee Parna home"><img src="images/logo-teal.webp" alt="Raahee Parna" width="600" height="333"></a>
