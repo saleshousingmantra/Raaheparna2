@@ -13,14 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
   /* Earlier versions remembered an enquiry and unlocked prices for good */
   try { localStorage.removeItem('raahee_prices_unlocked'); } catch (e) {}
 
-  /* Reading progress + header shadow */
+  /* Reading progress line (sits just under the floating header) + header shadow */
   var prog = document.getElementById('progress'), nav = document.querySelector('.nav');
   function onScroll() {
     var h = document.documentElement.scrollHeight - window.innerHeight;
-    if (prog) prog.style.width = (h > 0 ? Math.min(100, (window.scrollY / h) * 100) : 0) + '%';
+    var pct = h > 0 ? Math.min(1, window.scrollY / h) : 0;
     if (nav) nav.classList.toggle('is-scrolled', window.scrollY > 30);
+    if (prog && nav) {
+      var r = nav.getBoundingClientRect();
+      prog.style.top = (r.bottom + 6) + 'px';
+      prog.style.left = (r.left + 18) + 'px';
+      prog.style.width = Math.max(0, (r.width - 36) * pct) + 'px';
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   onScroll();
 
   /* Mobile menu */

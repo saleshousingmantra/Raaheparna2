@@ -54,7 +54,7 @@ em { font-style: normal; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ---------- progress ---------- */
-.progress { position: fixed; inset: 0 auto auto 0; height: 4px; width: 0; z-index: 90; pointer-events: none; background: linear-gradient(90deg, var(--lime), var(--green), var(--teal)); }
+.progress { position: fixed; top: 76px; left: 0; height: 3px; width: 0; z-index: 65; pointer-events: none; border-radius: 3px; background: linear-gradient(90deg, var(--lime), var(--green), var(--teal)); }
 
 /* ---------- floating pill header ---------- */
 .nav { position: sticky; top: 12px; z-index: 70; width: min(var(--wrap), 100% - 24px); margin: 12px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 10px 8px 22px; background: rgba(255, 255, 255, .9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 999px; box-shadow: var(--shadow-s); transition: box-shadow .3s; }
