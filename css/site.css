@@ -254,9 +254,9 @@ em { font-style: normal; }
 .rera p { margin: 0; font-size: .85rem; color: var(--ink-2); }
 
 /* ---------- forms ---------- */
-.form-card { padding: clamp(20px, 3vw, 32px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--shadow); }
-.form-card form label, .modal form label { display: block; margin: 1em 0 .35em; font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
-form input:not([type=hidden]), form select { width: 100%; padding: .8em 1em; border: 1.5px solid #cfc3e3; border-radius: 14px; background: var(--bg); font-size: .98rem; }
+.form-card { padding: clamp(18px, 2.6vw, 28px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--shadow); }
+.form-card form label, .modal form label { display: block; margin: .75em 0 .28em; font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+form input:not([type=hidden]), form select { width: 100%; padding: .62em .95em; border: 1.5px solid #cfdcd3; border-radius: 12px; background: var(--bg); font-size: .95rem; line-height: 1.35; }
 form input:focus, form select:focus { outline: 3px solid rgba(11, 122, 107, .3); border-color: var(--teal-d); }
 form input[readonly] { background: var(--tint-lime); border-color: transparent; font-weight: 500; }
 .form-locked { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -406,4 +406,181 @@ form input[readonly] { background: var(--tint-lime); border-color: transparent; 
   .pricelist thead th { font-size: .6rem; letter-spacing: .08em; }
   .pricelist .tot { font-size: .92rem; }
   .story__media::before { inset: 14px -8px -8px 14px; }
+}
+
+
+/* ==========================================================
+   Compact mobile layer (phones). Placed last so it wins.
+   Tighter type, spacing, tiles and a shorter enquiry form.
+   ========================================================== */
+@media (max-width: 640px) {
+  html { scroll-padding-top: 76px; }
+  body { font-size: .94rem; line-height: 1.55; }
+  p { margin-bottom: .75em; }
+  .wrap { width: min(var(--wrap), 100% - 28px); }
+
+  /* nav + bar */
+  .nav { top: 8px; width: calc(100% - 20px); margin-top: 8px; padding: 5px 6px 5px 14px; }
+  .nav__brand img { height: 30px; }
+  .nav__toggle { width: 36px; height: 36px; font-size: 1.1rem; }
+  .bar { left: 8px; right: 8px; bottom: 8px; padding: 4px; }
+  .bar a, .bar button { padding: .55em .3em; font-size: .76rem; }
+
+  /* rhythm */
+  .section { padding: 30px 0; }
+  .section__head { margin-bottom: 18px; }
+  .section__head h2, .h2 { font-size: 1.5rem; margin-bottom: .35em; }
+  .section__head p { font-size: .92rem; }
+  .eyebrow { margin-bottom: .7em; padding: .3em .85em .3em .7em; font-size: .64rem; }
+  .btn { padding: .55em 1.05em; font-size: .8rem; }
+
+  /* hero */
+  .hero { padding: 10px 0 8px; }
+  .hero__grid { gap: 14px; }
+  .hero__logo { height: 46px; margin-bottom: .5rem; }
+  .hero__title { font-size: 1.7rem; margin-bottom: .3em; line-height: 1.08; }
+  .hero__lead { font-size: .88rem; line-height: 1.5; margin-bottom: 0; }
+  .hero__cta { margin: .9rem 0 .2rem; }
+  .mosaic { height: 210px; gap: 8px; }
+  .mosaic img { border-radius: 16px; }
+  .mosaic__sticker { width: 68px; height: 68px; top: -8px; font-size: .54rem; }
+  .mosaic__sticker b { font-size: .95rem; }
+  .mosaic__badge { left: 8px; bottom: 8px; padding: .4em .8em; font-size: .62rem; }
+  .pricebar { margin-top: 14px; padding: 12px 14px; gap: 8px 12px; border-radius: 20px; flex-wrap: nowrap; justify-content: space-between; }
+  .pricebar__price small { font-size: .6rem; }
+  .pricebar__price b { font-size: 1.4rem; }
+  .pricebar__chips { display: none; }
+  .pricebar .btn { margin-left: 0; flex: none; }
+
+  /* facts */
+  .facts { gap: 8px; }
+  .fact { min-height: 84px; padding: 12px 14px; border-radius: 18px; }
+  .fact__num { font-size: 1.9rem; }
+  .fact__label { font-size: .58rem; letter-spacing: .08em; }
+
+  /* overview */
+  .story { gap: 16px; }
+  .story__lead { font-size: .92rem; margin-bottom: .6em; }
+  .story .chips, .chips { gap: 6px; }
+  .chip { padding: .35em .75em; font-size: .76rem; }
+  .story .chips { margin: .8rem 0 1rem; }
+  .story__media::before { display: none; }
+  .story__media img { border-radius: 20px; max-height: 190px; object-fit: cover; }
+
+  /* residences */
+  .units { gap: 10px; margin-inline: -14px; padding: 4px 14px 8px; }
+  .unit { flex-basis: 76%; padding: 16px 16px 18px; border-radius: 20px; }
+  .unit__type { font-size: 2rem; }
+  .unit__size { margin: .5em 0 .6em; font-size: .66rem; }
+  .unit p { font-size: .84rem; margin-bottom: .6em; }
+  .unit__price { margin-bottom: .8em; padding: .6em .8em; border-radius: 14px; flex-wrap: wrap; gap: 2px 10px; }
+  .unit__price b { font-size: 1.1rem; }
+  .pricelist { margin-top: 8px; padding: 14px; border-radius: 22px; }
+  .pricelist__head { margin-bottom: 4px; }
+  .pricelist__head h3 { font-size: 1.1rem; }
+  .pricelist table { border-spacing: 0 3px; }
+  .pricelist th, .pricelist td { padding: .5em .6em; font-size: .82rem; }
+  .pricelist thead th { padding-block: .3em; }
+  .pricelist .tot { font-size: .86rem; }
+  .pricelist__img { margin-top: 10px; }
+  .pricelist__img img { height: 130px; object-fit: cover; border-radius: 18px; }
+
+  /* gallery */
+  .gal { grid-auto-rows: 112px; gap: 8px; }
+  .gal__item { border-radius: 16px; }
+  .gal__item span { left: 8px; bottom: 8px; padding: .25em .7em; font-size: .62rem; }
+
+  /* amenities */
+  .amen { gap: 14px; }
+  .amen__side img { display: none; }
+  .amen__side p { font-size: .9rem; }
+  .amen__list { gap: 6px; }
+  .amen-item summary { padding: .7em 1em; font-size: .95rem; }
+  .amen-item summary::after { width: 24px; height: 24px; font-size: 1rem; }
+  .amen-item .chips { padding: 0 1em 1em; }
+
+  /* floor plans */
+  .plans { gap: 10px; padding-bottom: 6px; }
+  .plan { flex-basis: 88%; padding: 8px; border-radius: 20px; }
+  .plan img { border-radius: 14px; }
+  .plan figcaption { padding: 8px 4px 2px; }
+  .plan figcaption b { font-size: .95rem; }
+  .plans__cta { margin-top: 12px; }
+
+  /* location */
+  .loc { gap: 12px; }
+  .loc__map { border-radius: 20px; }
+  .loc__groups { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .dist { padding: 12px; border-radius: 18px; }
+  .dist h3 { font-size: .9rem; margin-bottom: .3em; }
+  .dist li { flex-direction: column; align-items: flex-start; gap: 3px; padding: .4em 0; font-size: .76rem; line-height: 1.3; }
+  .dist time { font-size: .68rem; padding: .1em .55em; }
+
+  /* faq */
+  .faq { gap: 12px; }
+  .faq__side p { font-size: .9rem; }
+  .qa { gap: 6px; }
+  .qa summary { padding: .75em 1em; font-size: .92rem; }
+  .qa summary::after { width: 24px; height: 24px; font-size: 1rem; }
+  .qa p { padding: 0 1em 1em; font-size: .88rem; }
+
+  /* developer */
+  .dev { padding: 20px 16px; border-radius: 24px; gap: 14px; }
+  .dev p { font-size: .9rem; }
+  .dev__stats { grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: .8rem; }
+  .dev__stats div { padding: 10px 8px; font-size: .52rem; letter-spacing: .04em; border-radius: 14px; }
+  .dev__stats strong { font-size: 1.05rem; }
+  .dev img { display: none; }
+
+  /* contact + enquiry form */
+  .contact { padding: 18px 14px; border-radius: 24px; gap: 14px; }
+  .contact__lead { font-size: .9rem; }
+  .rera { flex-direction: row; align-items: center; gap: 10px; margin-top: .9rem; padding: 8px; border-radius: 14px; }
+  .rera__qr img { width: 64px; height: 64px; }
+  .rera p { font-size: .74rem; line-height: 1.4; }
+  .form-card { padding: 14px; border-radius: 20px; }
+  .form-locked { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .form-locked input { padding: .4em .7em !important; font-size: .78rem !important; }
+  .form-card form label, .modal form label { margin: .5em 0 .2em; font-size: .6rem; letter-spacing: .1em; }
+  form input:not([type=hidden]), form select { padding: .5em .8em; font-size: .9rem; border-radius: 10px; }
+  .btn--block { margin-top: .6em; padding: .65em 1em; }
+  .fine { margin-top: .5em; font-size: .68rem; }
+  .field-error { font-size: .72rem; margin-top: .15em; }
+
+  /* enquiry popup */
+  .modal-overlay { padding: 10px; align-items: flex-end; }
+  .modal { padding: 16px 14px 14px; border-radius: 22px; max-height: 92vh; }
+  .modal h3 { font-size: 1.15rem; margin: 0 40px .15em 0; }
+  .modal-sub { font-size: .76rem; line-height: 1.4; margin-bottom: .3em; }
+  .modal-close { top: 10px; right: 10px; width: 32px; height: 32px; font-size: 1.2rem; }
+
+  /* footer */
+  .foot { margin-top: 26px; padding: 22px 0 78px; border-radius: 26px 26px 0 0; }
+  .foot__grid { gap: 14px 12px; }
+  .foot h4 { margin-bottom: .4em; font-size: .62rem; }
+  .foot li { margin-bottom: .2em; font-size: .86rem; }
+  .foot img.foot__logo { height: 36px; margin-bottom: .4rem; }
+  .foot p { font-size: .72rem; }
+  .foot__qr { width: 80px; padding: 5px; border-radius: 12px; }
+  .foot__qr img { width: 70px; height: 70px; }
+  .foot__legal { margin-top: 14px; padding-top: 12px; font-size: .68rem; }
+
+  /* blog + simple pages */
+  .crumbs { padding-top: 14px; font-size: .76rem; }
+  .blog-hero { padding: 14px 0 4px; }
+  .blog-hero h1 { font-size: 1.55rem; }
+  .blog-hero p { font-size: .9rem; }
+  .posts { gap: 10px; padding: 14px 0 20px; }
+  .post-card { border-radius: 20px; }
+  .post-card div { padding: 14px 16px 18px; }
+  .post-card h2 { font-size: 1.08rem; }
+  .post-card p { font-size: .84rem; }
+  .article { padding-bottom: 28px; }
+  .article h1 { font-size: 1.55rem; }
+  .article h2 { font-size: 1.2rem; margin-top: 1.4em; }
+  .article p, .article li { font-size: .95rem; }
+  .article figure { margin-bottom: 1.1em; }
+  .article figure img { border-radius: 20px; box-shadow: 8px 8px 0 var(--lime); max-height: 210px; object-fit: cover; }
+  .callout { padding: 20px 16px; border-radius: 22px; }
+  .related a { padding: .7em 1em; font-size: .88rem; }
 }
