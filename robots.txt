@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you/
 
-Sitemap: https://raaheeparnamoshi.com/sitemap.xml
+Sitemap: https://raaheeparna.com/sitemap.xml
