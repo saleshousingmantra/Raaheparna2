@@ -11,6 +11,8 @@ const SITE = [
   "blog",
   "js",
   "css",
+  "sitemap",
+  "fonts",
   "images",
   "favicon.ico",
   "favicon-16x16.png",
