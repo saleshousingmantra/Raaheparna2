@@ -54,8 +54,7 @@
   <link rel="preload" as="image" href="images/hero-river-800.webp" imagesrcset="images/hero-river-800.webp 800w, images/hero-river.webp 1600w" imagesizes="100vw" fetchpriority="high">
   <link rel="preconnect" href="https://rgzpytocxhjzxsopkrmu.supabase.co" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <script type="application/ld+json">
-{
+  <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -80,6 +79,9 @@
           "hi",
           "mr"
         ]
+      },
+      "brand": {
+        "@id": "https://raaheeparna.com/#brand"
       }
     },
     {
@@ -124,10 +126,7 @@
         "@id": "https://raaheeparna.com/#breadcrumb"
       },
       "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://raaheeparna.com/images/og-image.jpg",
-        "width": 1200,
-        "height": 630
+        "@id": "https://raaheeparna.com/#img-river"
       },
       "datePublished": "2026-10-27",
       "dateModified": "2026-10-27",
@@ -144,7 +143,10 @@
       }
     },
     {
-      "@type": "ApartmentComplex",
+      "@type": [
+        "ApartmentComplex",
+        "Residence"
+      ],
       "@id": "https://raaheeparna.com/#project",
       "name": "Raahee Parna",
       "description": "A residential project of 2, 2.5 and 3 BHK homes in Dudulgaon near Moshi, Pune, with over 40 lifestyle amenities close to the Indrayani River.",
@@ -172,7 +174,7 @@
         "value": "PR1260002602355"
       },
       "brand": {
-        "@id": "https://raaheeparna.com/#developer"
+        "@id": "https://raaheeparna.com/#brand"
       },
       "provider": {
         "@id": "https://raaheeparna.com/#developer"
@@ -403,7 +405,10 @@
             "unitText": "sq ft carpet"
           }
         }
-      ]
+      ],
+      "containedInPlace": {
+        "@id": "https://raaheeparna.com/#place"
+      }
     },
     {
       "@type": "FAQPage",
@@ -458,10 +463,128 @@
           }
         }
       ]
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://raaheeparna.com/#brand",
+      "name": "Raahee Parna",
+      "logo": "https://raaheeparna.com/images/logo-teal.webp"
+    },
+    {
+      "@type": "Place",
+      "@id": "https://raaheeparna.com/#place",
+      "name": "Raahee Parna, Dudulgaon, near Moshi, PCMC, Pune",
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Raahee+Parna+Dudulgaon+Pune",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dudulgaon",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412105",
+        "addressCountry": "IN"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Pune",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://raaheeparna.com/#img-river",
+      "url": "https://raaheeparna.com/images/hero-river.webp",
+      "contentUrl": "https://raaheeparna.com/images/hero-river.webp",
+      "width": 1600,
+      "height": 1066,
+      "caption": "Raahee Parna towers by the Indrayani River, Dudulgaon, near Moshi, Pune",
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://raaheeparna.com/#img-pool",
+      "url": "https://raaheeparna.com/images/pool.webp",
+      "contentUrl": "https://raaheeparna.com/images/pool.webp",
+      "width": 1600,
+      "height": 1066,
+      "caption": "Club Parna swimming pool at Raahee Parna, Dudulgaon",
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://raaheeparna.com/#img-aerial",
+      "url": "https://raaheeparna.com/images/aerial-1.webp",
+      "contentUrl": "https://raaheeparna.com/images/aerial-1.webp",
+      "width": 1600,
+      "height": 1066,
+      "caption": "Aerial view of Raahee Parna in Dudulgaon, Pune",
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://raaheeparna.com/#projectpages",
+      "name": "Raahee Parna project pages and locality guides",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Raahee Parna amenities: Club Parna, pool, sports and 40+ more",
+          "url": "https://raaheeparna.com/blog/raahee-parna/raahee-parna-amenities/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Raahee Parna Dudulgaon: project overview",
+          "url": "https://raaheeparna.com/blog/raahee-parna/raahee-parna-dudulgaon-overview/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Raahee Parna floor plans and carpet areas: B, C and D wings",
+          "url": "https://raaheeparna.com/blog/raahee-parna/raahee-parna-floor-plans/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Raahee Parna price list: 2, 2.5 and 3 BHK in Dudulgaon, Moshi",
+          "url": "https://raaheeparna.com/blog/raahee-parna/raahee-parna-price-list/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Raahee Parna RERA number and developer details",
+          "url": "https://raaheeparna.com/blog/raahee-parna/raahee-parna-rera-details/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Hospitals near Raahee Parna, Dudulgaon, Moshi",
+          "url": "https://raaheeparna.com/blog/locality/hospitals-near-raahee-parna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "IT parks and employment hubs near Raahee Parna, Dudulgaon",
+          "url": "https://raaheeparna.com/blog/locality/it-parks-and-jobs-near-raahee-parna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Schools and colleges near Raahee Parna, Dudulgaon",
+          "url": "https://raaheeparna.com/blog/locality/schools-and-colleges-near-raahee-parna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Shopping and malls near Raahee Parna, Dudulgaon",
+          "url": "https://raaheeparna.com/blog/locality/shopping-and-malls-near-raahee-parna/"
+        }
+      ]
     }
   ]
-}
-  </script>
+}</script>
     <link rel="stylesheet" href="css/site.css?v=20261126a">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/roboto-latin.woff2">
 </head>
