@@ -184,7 +184,7 @@ def add_srcset(t, rel):
 
 # --------------------------------------------------------------------------- page building
 def card_blog(s, p):
-    g = P[s]; base, alt = IMGS[g["img"]]
+    g = P[s]; base, alt = IMGS[g["img"]]; CAT = g.get("cat", globals()["CAT"])
     v = f"{p}images/{base}-{RESIZE[base]}.webp" if base in RESIZE else f"{p}images/{base}.webp"
     return (f'<article class="post-card rv">\n<a href="{p}blog/{CAT}/{s}/" tabindex="-1" aria-hidden="true"><img src="{v}" alt="{esc(alt)}" width="800" height="533" loading="lazy" decoding="async"></a>\n<div>\n'
             f'<h2><a href="{p}blog/{CAT}/{s}/">{cap(g["h"])}</a></h2>\n<p>{g["dek"]}</p>\n<a class="more arrow" href="{p}blog/{CAT}/{s}/">Read more </a>\n</div>\n</article>\n')
