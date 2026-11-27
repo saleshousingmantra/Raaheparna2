@@ -118,11 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* Open the popup once, 15 seconds after the page loads */
-  setTimeout(function () {
-    var a = document.activeElement;
-    if (!overlay.classList.contains('open') && !(a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))) openModal();
-  }, 15000);
+  /* The enquiry popup opens only when the visitor taps Enquire / WhatsApp (no automatic popup). */
 
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
