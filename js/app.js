@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var modalForm = document.getElementById('modalForm'), pendingWa = null;
   function openModal(plan, intent) {
     overlay.dataset.intent = intent || 'enquire';
-    if (plan) interest.value = plan;
+    if (plan && interest) { interest.value = plan; interest.dispatchEvent(new Event('change', { bubbles: true })); }
     document.getElementById('modalTitle').textContent = intent === 'whatsapp' ? 'Chat with us on WhatsApp' : 'Get Price & Brochure';
     overlay.classList.add('open'); document.body.style.overflow = 'hidden';
     setTimeout(function () { document.getElementById('modal-name').focus(); }, 100);
