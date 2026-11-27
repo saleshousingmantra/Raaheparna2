@@ -279,7 +279,7 @@ form input[readonly] { background: var(--tint-lime); border-color: transparent; 
 .foot { margin-top: clamp(48px, 7vw, 90px); padding: clamp(32px, 5vw, 56px) 0 100px; background: var(--bg-2); border-radius: var(--r-xl) var(--r-xl) 0 0; }
 .foot__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr auto; gap: 32px; }
 .foot img.foot__logo { height: 64px; width: auto; margin-bottom: 1rem; }
-.foot h4 { margin: 0 0 .8em; font-size: .72rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.foot h3.fh, .foot h4 { margin: 0 0 .8em; font-size: .72rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 .foot li { margin-bottom: .45em; }
 .foot a { color: var(--ink); text-decoration: none; }
 .foot a:hover { color: var(--teal-d); }
@@ -560,7 +560,7 @@ form input[readonly] { background: var(--tint-lime); border-color: transparent; 
   /* footer */
   .foot { margin-top: 26px; padding: 22px 0 78px; border-radius: 26px 26px 0 0; }
   .foot__grid { gap: 14px 12px; }
-  .foot h4 { margin-bottom: .4em; font-size: .62rem; }
+  .foot h3.fh, .foot h4 { margin-bottom: .4em; font-size: .62rem; }
   .foot li { margin-bottom: .2em; font-size: .86rem; }
   .foot img.foot__logo { height: 36px; margin-bottom: .4rem; }
   .foot p { font-size: .72rem; }
@@ -618,3 +618,5 @@ form input[readonly] { background: var(--tint-lime); border-color: transparent; 
 
 /* compare-mobile: let table cells wrap on phones so every column is visible */
 @media(max-width:640px){.article table.compare th,.article table.compare td{white-space:normal;padding:.6em .55em;font-size:.86rem;vertical-align:top}.article table.compare td:last-child{white-space:nowrap}}
+
+.posts-intro{padding:8px 0 0}.posts-intro p{max-width:820px;color:var(--ink-2)}
