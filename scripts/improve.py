@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 URL = "https://raaheeparna.com"
 DATE = "2026-11-26"
-VER = "20261126a"
+VER = "20261127b"
 RERA = "PR1260002602355"
 RERA_LINK = "https://maharerait.maharashtra.gov.in/project/view/67633"
 CAT = "raahee-parna"
